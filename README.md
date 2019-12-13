@@ -1,5 +1,5 @@
-# Fullstack User Registration and Authentication Tutorial w/ Node.js/Express.js, MongoDB, and JWT
-Tutorial on user registration and authentication with node.js/express.js, Mongodb, and HTML5
+# Fullstack User Authentication and Authorization Tutorial w/ Node.js/Express.js, MongoDB, and JWT
+Tutorial on user authentication and authorization with node.js/express.js, Mongodb, and HTML5
 
 ## Pre-requisites
 * Level: intermediate - advanced
@@ -13,7 +13,7 @@ If you're here, this is probably the situation you've found yourself in -- you'r
 If this sounds relevant, then keep reading, you're in good company!
 
 This tutorial is about setting up the following:
-* On the server side: we will set up **registration** and **authentication**. We will also set up a simple method of handling **permissions** and also allow people to request a **password reset**. This will follow the standard CRUD (create, read, update, delete) style. 
-* On the client side: we will set up the HTML and JS to allow people to **register**, **log in**, and perform the CRUD operations on data living in our database. We will use JSON Web Tokens (JWT) and cookies to handle persisting logins.
+* On the server side: we will set up **registration** and **authentication**. We will also set up a simple method of handling **permissions** and also allow people to request a **password reset**. This will follow the standard CRUD (create, read, update, delete) style. Oh and yes, we'll make sure people can **log out** as well. 
+* On the client side: we will set up the HTML and JS to allow people to **register**, **log in**/**log out**, and perform the CRUD operations on data living in our database. We will use JSON Web Tokens (JWT) and cookies to handle persisting logins.
 
 
