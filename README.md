@@ -57,5 +57,71 @@ As you can see, there are a number of components that need to come together that
 * A **client**:
   * We will be using plain **HTML** and vanilla **javascript** that will allow people to interact with your application.
 
+Now that you've got an overview of the situation, let's get setup.
+
+***
+
+# The List Project
+
+For this project, we are going to build a social link sharing application that allows you and your friends to share interesting links from across the web in one place. The project will be comprised of the following components:
 
 
+## Setup
+
+We are going to start from null, zero, nada, nothing, a blank canvas onto which we will make our masterpiece. 
+
+Fire up your terminal window and and make a new project folder:
+
+```sh
+cd  ~/your/preferred/parent/directory
+mkdir list-project
+```
+
+Change into the `/list-project` directory:
+
+```sh
+cd list-project
+```
+
+Now we will create our application directory structure. It is going to look like this:
+
+```
+README.md
+config.js
+index.js
+package.json
+.env
+/db
+/helpers
+/middleware
+/models
+/public
+/routes
+/node_modules
+```
+
+where:
+* README.md
+  * *FILE*: Our readme file that explains how to set up your project, documentation, etc
+* config.js:
+  * *FILE*: This is where  
+* index.js:
+  * *FILE*: where our main node.js/express server code will live
+* package.json:
+  * *FILE*: This is where our node application information is stored.
+* .env:
+  * *FILE*: This is where we will hide our secret application information.
+* /db
+  * *DIRECTORY*: the directory that has the information regarding our mongodb database  
+* /helpers
+  * *DIRECTORY*: the directory where any handy helper functions will live
+* /middleware
+  * *DIRECTORY*: the directory where our express middleware will live
+* /models
+  * *DIRECTORY*: the directory where our mongodb data model schemas will live
+* /public
+  * *DIRECTORY*: the directory where our client side code will live
+* /routes
+  * *DIRECTORY*: the directory where our API routes for our `users` and `links`.
+* /node_modules
+  * *DIRECTORY*: the directory where npm will install all our application dependencies
