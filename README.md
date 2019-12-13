@@ -53,7 +53,9 @@ As you can see, there are a number of components that need to come together that
 * A **database**:
   * We will be using **MongoDB**
 * A **server**:
-  * We will be using Node.js/Express.js and create an API to pass messages between your client and database.
+  * We will be using **Node.js/Express.js** and create an API that allows us to pass messages between your client and database.
 * A **client**:
-  * We will be using plain HTML and vanilla javascript that will allow people to input data and make requests to your server.
+  * We will be using plain **HTML** and vanilla **javascript** that will allow people to interact with your application.
+
+
 
