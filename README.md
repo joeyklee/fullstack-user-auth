@@ -65,6 +65,105 @@ Now that you've got an overview of the situation, let's get setup.
 
 For this project, we are going to build a social link sharing application that allows you and your friends to share interesting links from across the web in one place. The project will be comprised of the following components:
 
+* A
+* B
+* C
+* D
+
+## Pre-Setup & Installation
+
+The following instructions are for `macOS` which is the operating system I'm running. If you're a windows user, I'd love your contribution on how to setup these dependencies ❤.
+
+### Install Homebrew
+
+```sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+### Install Node.js with NVM
+
+```sh
+# use homebrew to install nvm
+brew install nvm
+
+# make a directory for nvm
+mkdir ~/.nvm/
+```
+
+open your `.bash_profile` or create a file in your `~/.bash_profile` and include the following:
+
+```txt
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+```
+
+Check to see if nvm is working:
+
+```sh
+nvm ls
+```
+
+This will list a which node versions are currently installed. If none are installed then you'll see a bunch of `N/A`s.
+
+Now install node version `v10.15.0` which is what this tutorial was built on:
+
+```sh
+nvm install 10.15.0
+```
+
+And now you can set it to default to that version:
+
+```sh
+nvm alias default 10.15.0
+```
+
+via: https://www.chrisjmendez.com/2018/02/07/install/
+
+NOTE: At the time of this writing, I would avoid node versions less thatn`10.0` since many services are beginning to deprecate their support for those versions.
+
+### Install MongoDB
+
+```sh
+brew install mongodb
+```
+
+If this is your first time installing mongodb, you'll need to create directory for your database and also make sure to give your machine the proper read/write permissions. Do this by:
+
+```sh
+# go to your root
+cd 
+# make a directory called data/db
+mkdir -p /data/db
+
+# use `sudo chown` to set the permissions
+sudo chown -R `id -un` /data/db
+```
+
+And voila! You can now start your mongodb by running:
+```sh
+mongod
+```
+
+and stopping mongo by pressing the following in the same terminal window: `ctl` + `c` 
+
+If you'd like to have visual interface for the mongodb I can recommend:
+* Robo3T: https://robomongo.org/download
+
+***
+***
+***
+
+## Rest Stop: 
+So far we have:
+* Installed all of our major dependencies:
+  * node.js
+  * mongodb
+
+If these are not installed, please make sure to take care before proceeding.
+
+***
+***
+***
 
 ## Setup
 
@@ -125,3 +224,36 @@ where:
   * *DIRECTORY*: the directory where our API routes for our `users` and `links`.
 * /node_modules
   * *DIRECTORY*: the directory where npm will install all our application dependencies
+
+For short, you can do the following:
+
+```sh
+# initialize the project as a git repo
+git init
+
+# create a package.json and initialize with all defaults
+npm init -y
+
+# create the files
+touch README.md config.js index.js .env
+
+# create the directories
+mkdir db helpers middleware models public routes
+```
+
+![Screenshot of directory structure after running the above commands](assets/setup_dir-structure.png)
+
+Now that we've scaffolded our project directory, it is time to start filling in our project.
+
+***
+***
+***
+## Rest Stop:
+
+At this point we've:
+* scaffolded out our application with the main files in our root directory and main folders which will help us organize our project files.
+
+
+***
+***
+***
