@@ -32,11 +32,11 @@ const postSchema = new Schema({
   },
   "createdBy_username": {
     type: String,
-    required: true
+    required: false // TODO: change to true!
   },
   "createdBy_id": {
     type: String,
-    required: true
+    required: false // TODO: change to true!
   }
 }, {
   timestamps: {
@@ -184,4 +184,98 @@ app.use('/api/v1/posts', postRoutes)
 ```
 
 What this is saying is: "at the following route: `/api/v1/posts`, you will find the API endpoints -- `GET`, `POST`, `PUT`, `DELETE` -- that users can interface with. Basically the route `/api/v1/posts` is prepended to the endpoints defined in the `./routes/posts` file.
+
+## Test your posts API endpoints
+Let's test to see if your endpoints are ready to rock:
+
+### POST
+First we need to add something to our database:
+
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"title": "test", "description": "testing testing 123", "link": "https://itp.nyu.edu"}' http://localhost:3030/api/v1/posts
+```
+
+This should return:
+
+```json
+{"title":"test","description":"testing testing 123","_id":"5e13ab1c263ec41ca339c7e3","link":"https://itp.nyu.edu","created_at":"2020-01-06T21:48:12.048Z","updated_at":"2020-01-06T21:48:12.048Z","__v":0}
+```
+note: your `_id` and `timestamps` will be different.
+
+### GET
+
+```sh
+curl http://localhost:3030/api/v1/posts
+```
+
+This should return:
+
+```json
+[{"title":"test","description":"testing testing 123","_id":"5e13ab1c263ec41ca339c7e3","link":"https://itp.nyu.edu","created_at":"2020-01-06T21:48:12.048Z","updated_at":"2020-01-06T21:48:12.048Z","__v":0}]
+```
+Note: this returns an array!
+
+### GET /:id
+
+```sh
+curl http://localhost:3030/api/v1/posts/5e13ab1c263ec41ca339c7e3
+```
+
+this should return:
+
+```json
+{"title":"test","description":"testing testing 123","_id":"5e13ab1c263ec41ca339c7e3","link":"https://itp.nyu.edu","created_at":"2020-01-06T21:48:12.048Z","updated_at":"2020-01-06T21:48:12.048Z","__v":0}%
+```
+
+### PUT
+
+```sh
+curl -X PUT -H "Content-Type: application/json" -d '{"title": "NYU ITP Program", "description": "Learn to make anything at ITP.", "link": "https://itp.nyu.edu"}' http://localhost:3030/api/v1/posts/5e13ab1c263ec41ca339c7e3
+```
+
+This should return:
+
+```json
+{"data":{"title":"NYU ITP Program","description":"Learn to make anything at ITP.","_id":"5e13ab1c263ec41ca339c7e3","link":"https://itp.nyu.edu","created_at":"2020-01-06T21:48:12.048Z","updated_at":"2020-01-06T21:52:53.570Z","__v":0},"status":"success"}
+```
+
+
+### DELETE
+
+```sh
+curl -X DELETE http://localhost:3030/api/v1/posts/5e13ab1c263ec41ca339c7e3
+```
+
+If you run the above, this will delete the document. 
+
+
+## Add and Commit your changes
+
+```
+git add .
+git commit -m "adds posts routes"
+```
+
+***
+***
+***
+## Rest Stop:
+
+At this point you've:
+* done a lot of stuff
+* set up a data model for the posts
+* set up the CRUD routes for the posts
+* added the routes to your server
+
+***
+***
+***
+
+Notice how our `POST`, `PUT`, `DELETE` routes can be performed by anyone. In a usual scenario, we only want to user who created the document to be able to edit or delete data. Also, we only want people who are authorized to create data to do so (i.e. the people with user accounts). The next steps will be the most challenging, but it is alas time to get our authentication and authorization sorted for our project!
+
+Continue onto the next step:
+* ↳ [Step 7: CRUD users routes](/07_users-routes.md)
+
+
+
 
