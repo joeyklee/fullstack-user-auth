@@ -70,8 +70,14 @@ For this project, we are going to build a social link sharing application that a
 * ↳ [Part 3: configure the config](/03_configure-the-config.md)
 * ↳ [Part 4: setting the environment](/04_setting-env.md)
 * ↳ [Part 5: basic express app](/05_basic-express-app.md)
-* ↳ [Part 6: posts-routes](06_posts-routes.md)
-* ↳ [Part 7: X]()
+* ↳ [Part 6: posts schema](06_posts-schema.md)
+* ↳ [Part 7: posts routes](07_posts-routes.md)
+* ↳ [Part 8: users schema](08_users-schema.md)
+* ↳ [Part 9: emailer](09_emailer.md)
+* ↳ [Part 10: auth middleware](10_auth-middleware.md)
+* ↳ [Part 11: users routes](11_users-routes.md)
+* ↳ [Part 12: authd posts routes](12_authd-posts-routes.md)
+* ↳ [Part 13: frontend list view](13_frontend-list-view.md)
 
 The first stop on our development journey will be to install our required software. You can begin by following this link:
 * ↳ [Part 1: installation](01_installation.md)
