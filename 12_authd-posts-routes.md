@@ -7,7 +7,7 @@ At the top of your `routes/posts.js`:
 ```js
 const express = require('express');
 const api = express.Router();
-const db = require('../models/posts.js');
+const db = require('../models/post.js');
 
 /** 
 * TODO: Authentication middleware - We will defined these later and then uncomment them!!! Just note that we will come back to these one our authentication has been set up and defined.
@@ -28,7 +28,7 @@ Create a file called `/middleware/isOwner.js`.
 In `/middleware/isOwner.js`:
 
 ```js
-const Posts = require('../models/posts');
+const Posts = require('../models/post');
 
 const isOwner = async (req, res, next) => {
   try{
@@ -81,6 +81,7 @@ api.delete('/:id', auth, isOwner, async (req, res, next) => { // ...a bunch of c
 ```
 
 NOTE: the `formattedData` variable now gets the `createdBy_username` and `createdBy_id` properties added to the mix (they were previously commented out).
+
 
 ## Add and Commit your changes
 

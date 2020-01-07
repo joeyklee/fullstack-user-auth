@@ -385,6 +385,93 @@ api.post('/auth/reset_password', async (req, res) =>{
 ```
 If a user makes a request to this route, you'll send them a nice email confirming that their password has been nicely reset. How nice of you!
 
+## Testing the user API endpoints:
+
+### /register
+
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"username": "joey", "email": "joeyklee@nyu.edu", "password": "super_secret_password"}' http://localhost:3030/api/v1/users/register
+```
+
+This will return:
+```JSON
+{"user":{"_id":"5e14ae003b084562075177b6","username":"joey","email":"joeyklee@nyu.edu","password":"$2a$08$xnHvlUdmyN89pUY8OP7Lr.f3xFPKiuoCix9zbQP2xb9eRpmpCK2jy","tokens":[{"_id":"5e14ae003b084562075177b7","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTE0YWUwMDNiMDg0NTYyMDc1MTc3YjYiLCJpYXQiOjE1Nzg0MTM1Njh9.hnhUSscgffXsAEXNlCn4gAx0rfvy37_GZUTdNTAnkjY"}],"__v":1},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTE0YWUwMDNiMDg0NTYyMDc1MTc3YjYiLCJpYXQiOjE1Nzg0MTM1Njh9.hnhUSscgffXsAEXNlCn4gAx0rfvy37_GZUTdNTAnkjY"}
+```
+
+### /login
+
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"email": "joeyklee@nyu.edu", "password": "super_secret_password"}' http://localhost:3030/api/v1/users/login
+```
+
+This will return:
+```json
+{"user":{"_id":"5e14ae003b084562075177b6","username":"joey","email":"joeyklee@nyu.edu","password":"$2a$08$xnHvlUdmyN89pUY8OP7Lr.f3xFPKiuoCix9zbQP2xb9eRpmpCK2jy","tokens":[{"_id":"5e14ae003b084562075177b7","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTE0YWUwMDNiMDg0NTYyMDc1MTc3YjYiLCJpYXQiOjE1Nzg0MTM1Njh9.hnhUSscgffXsAEXNlCn4gAx0rfvy37_GZUTdNTAnkjY"},{"_id":"5e14ae723b084562075177b9","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTE0YWUwMDNiMDg0NTYyMDc1MTc3YjYiLCJpYXQiOjE1Nzg0MTM2ODJ9.t21NLxeNYbPghNomyEAq9Jn-y6bliqbmmAa_Bm02VBQ"}],"__v":2},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTE0YWUwMDNiMDg0NTYyMDc1MTc3YjYiLCJpYXQiOjE1Nzg0MTM2ODJ9.t21NLxeNYbPghNomyEAq9Jn-y6bliqbmmAa_Bm02VBQ"}
+```
+
+### /me/logout
+
+Notice we use the auth token generated at **login** here. 
+
+```sh
+curl -X POST -H 'Accept: application/json' -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTE0YWUwMDNiMDg0NTYyMDc1MTc3YjYiLCJpYXQiOjE1Nzg0MTM2ODJ9.t21NLxeNYbPghNomyEAq9Jn-y6bliqbmmAa_Bm02VBQ" http://localhost:3030/api/v1/users/me/logout
+```
+
+This will return:
+
+```json
+{"status":"success","message":"logout complete"}
+```
+
+### /me/logoutall
+
+Notice we use the auth token generated at **signup** here. 
+
+```sh
+curl -X POST -H 'Accept: application/json' -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTE0YWUwMDNiMDg0NTYyMDc1MTc3YjYiLCJpYXQiOjE1Nzg0MTM1Njh9.hnhUSscgffXsAEXNlCn4gAx0rfvy37_GZUTdNTAnkjY" http://localhost:3030/api/v1/users/me/logoutall
+```
+
+This will return:
+
+```json
+{"status":"success","message":"logout complete"}%
+```
+
+Your user will now have no login tokens attached to their account. New ones will be generated when they login again. 
+
+### /auth/forgot_password
+
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"email": "joeyklee@nyu.edu"}' http://localhost:3030/api/v1/users/auth/forgot_password
+```
+
+If you set up your email environment variables correctly, you'll see:
+
+```json
+{"status":"success","message":"Kindly check your email for further instructions"}%
+```
+
+And, if you check your inbox you'll see:
+
+![Email with the password reset for the list project screenshot](/assets/11_forgot_password_request.png)
+
+NOTE: if you're using Gmail, you'll need to turn off a security setting that warns about your email being used by another service -- the "Less secure app access": gmail ==> account ==> security ==> less secure app access ==> set: on
+
+### /auth/reset_password
+
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"email": "joeyklee@nyu.edu", "newPassword":"super_secret_password", "verifyPassword":"super_secret_password", "token":"5146095f50481f144c6eb6eb4562a14799e3742f"}' http://localhost:3030/api/v1/users/auth/reset_password
+```
+This will return:
+
+```json
+{"status":"success","message":"password reset successful!"}
+```
+
+And another email will fire with a confirmation:
+
+![Password reset confirmation email screenshot](assets/11_password-reset-confirmation.png)
+
 ***
 ***
 ***

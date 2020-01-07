@@ -12,7 +12,7 @@ In your `/routes` directory, create a file called `/routes/posts.js`:
 ```js
 const express = require('express');
 const api = express.Router();
-const db = require('../models/posts.js');
+const db = require('../models/post.js');
 
 /** 
 * TODO: Authentication middleware - We will defined these later and then uncomment them!!! Just note that we will come back to these one our authentication has been set up and defined.
