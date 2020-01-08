@@ -106,6 +106,103 @@ You will have to create the login and signup pages. We will get to this in the n
 
 ## Adding the main view: part 1 - a form to submit new links
 
+```html
+<main class="main">
+  <!-- Part 1: a form to submit new posts if authenticate -->
+  <section class="section__submit">
+    <h3 class="section__submit__title">· Add to list ·</h3>
+    <form class="link__form">
+      <!-- input for link -->
+      <fieldset class="link__form__section">
+        <legend class="link__form__section__title">link</legend>
+        <input class="link__form__section__input link__form__section__input--text" type="text" name="link" placeholder="e.g. https://itp.nyu.edu">
+      </fieldset>
+      <!-- input for title -->
+      <fieldset class="link__form__section">
+        <legend class="link__form__section__title">title</legend>
+        <input class="link__form__section__input link__form__section__input--text" type="text" name="title" placeholder="e.g. ITP Homepage website">
+      </fieldset>
+       <!-- input for description -->
+       <fieldset class="link__form__section">
+        <legend class="link__form__section__title">description</legend>
+        <textarea class="link__form__section__input link__form__section__input--textarea" name="description" placeholder="e.g. ITP is a grad school program about the recently possible."></textarea>  
+      </fieldset>
+      <input class="link__form__section__input link__form__section__input--button" type="submit" value="🚀 share this link">
+    </form>
+  </section>
+
+  <!-- part 2: list of all the posts -->
+  <!-- ... -->
+```
 
 
 ## Adding the main view: part 2 - a section to render the links
+
+```html
+<!-- part 2: list of all the posts -->
+<section class="section__view">
+  <h3 class="section__view__title">· all posts ·</h3>
+  <ul class="section__view__posts">
+    <!-- this is where your posts will be filled in with javascript -->
+  </ul>
+```
+
+![image of site with the markup as shown](/assets/13_list-without-placeholder.png)
+
+The markup for all of our `li` elements in our `.section__view__posts` will look like the following html markup. If you were to add this in, the site would look like the image below. What we will do is to fill in the text within the `{{}}` using javascript.
+
+```html
+<li class="section__view__post">
+  <div class="section__view__post__functions">
+    <button>edit</button>
+    <button>delete</button>
+  </div>
+  <h4 class="section__view__post__title">
+    <a href="{{URL}}" target="_blank" rel="noreferrer" 
+      class="section__view__post__link section__view__post__link--large">
+      {{title with link}}
+    </a>
+  </h4>
+  <p class="section__view__post__description">
+    {{link description}}
+  </p>
+  <ul class="section__view__post__meta">
+    <li class="section__view__post__meta__section section__view__post__meta__username">Submitted by: {{name}}</li>
+    <li class="section__view__post__meta__section section__view__post__meta__link">
+      <a href="{{URL}}" class="section__view__post__link--small">{{https://itp.nyu.edu}}</a>
+    </li>
+  </ul>
+</li>
+```
+
+![image of site with placeholder html markup showing how each data property will be mapped to the HTML](/assets/13_list-with-placeholder.png)
+
+## Add and Commit your changes
+
+```
+git add .
+git commit -m "adds frontend home setup"
+```
+
+
+***
+***
+***
+## Rest Stop:
+
+At this point you've:
+* added in the placeholder html
+* added sections for a nav bar, header, post submission form, and a view to render the posts.
+  
+A few considerations we will have to solve:
+* notice the `edit` button. How will me edit our posts? There are elegant ways to handle this (e.g. using something like Model-View-Controller) structure, but we might settle here for a more simple approach. Just something to note!
+* currently our `/login` and `/signup` routes do not go anywhere. Also remember we will need a view for `/reset_password`. We will have to add these views in our `/public` directory as well as add in our server `index.js` the URL to those routes. 
+* We will address these in the following sections. Stay with me, you're doing great!
+
+***
+***
+***
+
+Continue onto the next step:
+* ↳ [Step 14: the Posts class](/14_posts-class.md)
+
