@@ -603,7 +603,7 @@ In `index.js`
 /**
 * Step 9: Set your user routes
 **/
-const userRoutes = require('./routes/user');
+const userRoutes = require('./routes/users');
 app.use('/api/v1/users', userRoutes);
 
 ```
