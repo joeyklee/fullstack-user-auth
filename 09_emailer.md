@@ -8,9 +8,9 @@ Having an emailer set up is an important part of your auth system because it all
 
 We are going to set up our emailer using the `nodemailer` module. 
 
-For the purpose of this project, set up your `emailer` as a `helper` in the `/helper` directory. 
+For the purpose of this project, set up your `emailer` as a `helper` in the `/helpers` directory. 
 
-Create a file called `emailer.js` in the `/helper` directory.
+Create a file called `emailer.js` in the `/helpers` directory.
 
 In the `emailer.js` file:
 

@@ -11,6 +11,9 @@ Here we are going to add the API endpoints that will allow users to:
 
 This is a roadmap of what we're going to be doing here:
 
+Create the file `routes/users.js`. 
+
+In `routes/users.js`
 ```js
 /**
 * Step 11.1: read in required modules
@@ -66,7 +69,7 @@ const express = require('express');
 const api = express.Router();
 const User = require('../models/user.js');
 const auth = require('../middleware/auth');
-// const scrub = require('../middleware/scrub'); // TODO: this will scrub out the password whenever user info is sent with requests - we'll come back to this.
+const scrub = require('../middleware/scrub'); // TODO: this will scrub out the password whenever user info is sent with requests - we'll come back to this.
 // for the emailer
 const crypto = require('crypto');
 const bcrypt = require('bcryptjs');
@@ -101,8 +104,8 @@ api.post('/register', async (req, res) => {
     res.cookie('auth_token', token, {
       maxAge: 60 * 60 * 1000, // 1 hour
       httpOnly: true,
-      secure: true, // true,
-      sameSite: true,
+      secure: false, // true,
+      sameSite: false,
     })
 
     res.status(201).send({
@@ -130,7 +133,6 @@ Again you can see an auth token is generated and sent to the client when a log-i
  * Allow the user to login
  * with the email and password
 **/
-
 api.post('/login', async (req, res) => {
   try {
     const {
@@ -152,8 +154,8 @@ api.post('/login', async (req, res) => {
     res.cookie('auth_token', token, {
       maxAge: 60 * 60 * 1000, // 1 hour
       httpOnly: true,
-      secure: true, // true,
-      sameSite: true,
+      secure: false, // true,
+      sameSite: false,
     })
 
     res.send({
@@ -290,12 +292,12 @@ api.post('/auth/forgot_password', async (req, res) => {
     const emailData = {
       to: user.email,
       from: config.MAILER.EMAIL,
-      subject: '[List Project] Forgot Password Request',
+      subject: '[list project] Forgot Password Request',
       html: `
         <div>
-        <h1>Password reset for the List Project</h1>
+        <h1>Password reset for list project</h1>
         <p>
-          url: http://localhost:8080/reset_password?token=${token}
+          url: http://localhost:3030/reset_password?token=${token}
           name: ${user.username}
         </p>
         </div>
@@ -384,6 +386,54 @@ api.post('/auth/reset_password', async (req, res) =>{
 })
 ```
 If a user makes a request to this route, you'll send them a nice email confirming that their password has been nicely reset. How nice of you!
+
+<!-- ## Step 11.8:  Getting user info and scrubbing data
+
+In case we want to build a user profile page, you can add in a api route for `/me`:
+
+```js
+/**
+* Step 11.8: get user info
+**/
+api.get('/me', auth, scrub, async (req, res) => {
+  try{
+    res.json({status:'success', ...res.locals.cleanUser});
+  } catch(err){
+    throw new Error(err)
+  }
+})
+```
+
+Notice we have in our GET request, some middleware that calls `scrub`. This is middleware that removes sensitive information such as the email and the hashed password of the user. 
+
+Let's create the middleware `middleware/scrub.js`.
+
+In `middleware/scrub.js`:
+
+```js
+const scrub = async (req, res, next) => {
+
+  try{
+    if(req.user){
+      const cleanUser = {
+        username: req.user.username,
+        _id: req.user._id,
+      };
+      
+      res.locals.cleanUser = cleanUser;
+    }
+    next();
+  } catch(err){
+    next(err);
+  }
+}
+
+module.exports = scrub;
+```
+
+This will return a "clean user" profile info. -->
+
+
 
 ## Testing the user API endpoints:
 
