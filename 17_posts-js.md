@@ -279,6 +279,13 @@ window.addEventListener("DOMContentLoaded", function(){
 ```
 
 
+## Add and Commit your changes
+
+```
+git add .
+git commit -m "adds all functions to main"
+```
+
 ## Congratulations! 🎉
 
 You've now completed the tutorial. If you'd like to read the recap and conclusion continue onto the next step:

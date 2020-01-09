@@ -59,7 +59,7 @@ class Signup {
 
 ```
 git add .
-git commit -m "adds Signup.ks"
+git commit -m "adds Signup.js"
 ```
 
 ***

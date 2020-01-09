@@ -45,6 +45,7 @@ NOTE: before you deploy the application, you will have to:
   * if you use mongolab, it will look something like:
   * `mongodb://<dbuser>:<dbpassword>@ds######.mlab.com:#####/list-project`
 * add to the `white-listed URLs` your public URL.
+* And remember to update the `localhost:3030` url in the `reset_password` email template in you `routes/users.js`.
 
 These should work pretty much right out of the box. So if you put your project up on one of those sites, it should work like cake!
 
