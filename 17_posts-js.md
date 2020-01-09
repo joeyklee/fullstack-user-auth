@@ -13,7 +13,6 @@ The major thing to note here is that the PUT, PUT, and DELETE requests are all u
 
 
 ```js
-
 class Posts {
   constructor(){
     // posts data
@@ -264,6 +263,21 @@ Whew! There's a lot in there, but the general idea is that it allows you to:
 ***
 ***
 ***
+
+## Add everything to `public/js/main.js`
+
+The last thing to do is to add everything to `public/js/main.js`:
+
+In `public/js/main.js`:
+```js
+window.addEventListener("DOMContentLoaded", function(){
+  console.log('hello lovely human');
+  const posts = new Posts();
+  const login = new Login();
+  const signup = new Signup();
+});
+```
+
 
 ## Congratulations! 🎉
 

@@ -48,7 +48,6 @@ In `/public/reset_password.html`, add the following:
       </section>
       <a class="reset__link" href="/">back home ↩</a>
     </div>
-    <!-- Scripts -->
     <script src="js/ResetPassword.js"></script>
     <script>
       // we're going to code directly here
@@ -119,6 +118,7 @@ class ResetPassword {
     }
   }
 }
+
 
 ```
 
