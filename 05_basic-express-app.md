@@ -280,7 +280,7 @@ nodemon index.js
 Even better however is to add the following to the `scripts` of our `package.json`:
 
 ```json
-"scipts":{
+"scripts":{
   "start": "node index.js",
   "dev": "nodemon index.js"
 }
