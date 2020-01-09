@@ -17,7 +17,7 @@ You can find the complete stylesheet here:
 
 At the end of this exercise this is what our page will look like:
 
-![Screenshot of the final page](/assets/13_roadmap-final-product.png)
+![Screenshot of the final page](../assets/13_roadmap-final-product.png)
 
 We will have two view routes:
 * `/`
@@ -104,7 +104,7 @@ Let's start with the header section
 </header>
 ```
 
-![Screenshot with header added](/assets/13_header.png)
+![Screenshot with header added](../assets/13_header.png)
 
 
 ## 13.3: laying out the Main section
@@ -226,7 +226,7 @@ main
 
 As you can see there's a form that is divided using the `fieldset` tag:
 
-![Screenshot of adding in the editor section](13/../assets/13_editor.png)
+![Screenshot of adding in the editor section](../assets/13_editor.png)
 
 
 ## 13.5.1: Filling in the posts section - part 1: the form
@@ -282,7 +282,7 @@ Here we add in the form to submit new posts.
         </section>
 ```
 
-![Screenshot of form to submit new post added](/assets/13_form-new.png)
+![Screenshot of form to submit new post added](../assets/13_form-new.png)
 
 ## 13.5.2: Filling in the posts section - part 2: the list section
 
@@ -296,7 +296,7 @@ Here we add in the form to submit new posts.
           </section>
 ```
 
-![Screenshot of post list section added](13/../assets/13_post-list.png)
+![Screenshot of post list section added](../assets/13_post-list.png)
 
 ## Review - Step 13.5: subsection posts in it's entirety
 
@@ -481,7 +481,7 @@ The nav section includes our:
         <!-- end .nav-->
 ```
 
-![Screenshot of nav section added](13/../assets/13_nav.png)
+![Screenshot of nav section added](../assets/13_nav.png)
 
 
 ## Add and Commit your changes
