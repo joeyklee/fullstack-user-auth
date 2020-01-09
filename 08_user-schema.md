@@ -7,9 +7,9 @@ The time has come! Here we will:
 
 ## Step 8.1: Defining the User Schema
 
-Go to the `/models` directory and create `users.js`.
+Go to the `/models` directory and create `user.js`.
 
-In `/models/users.js`:
+In `/models/user.js`:
 ```js
 const mongoose = require('mongoose');
 const config = require('../config');
