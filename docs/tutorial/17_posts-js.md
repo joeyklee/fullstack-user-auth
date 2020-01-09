@@ -289,5 +289,5 @@ git commit -m "adds all functions to main"
 ## Congratulations! 🎉
 
 You've now completed the tutorial. If you'd like to read the recap and conclusion continue onto the next step:
-* ↳ [Step 18: Recap and conclusions](/18_conclusion.md)
+* ↳ [Step 18: Recap and conclusions](tutorial/18_conclusion.md)
 

@@ -633,5 +633,5 @@ The last thing on our agenda is to tie up some loose ends in our `posts` route w
 
 
 Continue onto the next step:
-* ↳ [Step 12: authenticated posts routes](/12_authd-posts-routes.md)
+* ↳ [Step 12: authenticated posts routes](tutorial/12_authd-posts-routes.md)
 

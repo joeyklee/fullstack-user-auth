@@ -64,6 +64,6 @@ git commit -m "creates Post model"
 ```
 
 Continue onto the next step:
-* ↳ [Step 7: posts routes](/07_posts-routes.md)
+* ↳ [Step 7: posts routes](tutorial/07_posts-routes.md)
 
 

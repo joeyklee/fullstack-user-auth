@@ -109,5 +109,5 @@ At this point you've:
 
 
 Continue onto the next step:
-* ↳ [Step 13: front-end 1: the setup](/13_frontend-setup.md)
+* ↳ [Step 13: front-end 1: the setup](tutorial/13_frontend-setup.md)
 

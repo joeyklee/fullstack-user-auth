@@ -66,4 +66,4 @@ At this point we've:
 Now that we've set our environment variables in the `.env` file. We can move on to adding our first server code.
 
 Continue onto the next step:
-* ↳ [Step 5: basic express app](/05_basic-express-app.md)
+* ↳ [Step 5: basic express app](tutorial/05_basic-express-app.md)

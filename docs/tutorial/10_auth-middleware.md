@@ -75,4 +75,4 @@ At this point you've:
 ***
 
 Continue onto the next step:
-* ↳ [Step 11: defining users routes](/11_users-routes.md)
+* ↳ [Step 11: defining users routes](tutorial/11_users-routes.md)

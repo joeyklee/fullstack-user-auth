@@ -142,5 +142,5 @@ A few notes:
 While we've added the ability to log in to your application, we now need to make sure to create the functionality and the view to allow users to reset their passwords. 
 
 Continue onto the next step:
-* ↳ [Step 16: the password reset](/16_password-reset.md)
+* ↳ [Step 16: the password reset](tutorial/16_password-reset.md)
 

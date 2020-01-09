@@ -1,7 +1,7 @@
 # Fullstack User Authentication and Authorization Tutorial w/ Node.js/Express.js, MongoDB, and JWT
 Tutorial on user authentication and authorization with node.js/express.js, Mongodb, JSONWebTokens, Cookies and HTML5
 
-![Screenshot of final application](docs/assets/13_roadmap-final-product.png)
+![Screenshot of final application](assets/13_roadmap-final-product.png)
 
 ## Pre-requisites
 * Level: intermediate - advanced
@@ -85,4 +85,7 @@ If you want to see the full thing, see:
 ## Getting Started - installation
 
 The first stop on our development journey will be to install our required software. You can begin by following this link:
-* ↳ [Part 1: installation](https://joeyklee.github.io/fullstack-user-auth/#/tutorial/01_installation)
+* ↳ [Part 1: installation](tutorial/01_installation.md)
+
+
+

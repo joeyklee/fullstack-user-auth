@@ -236,4 +236,4 @@ At this point you've:
 Before you move onto defining the routes that will make use of your `users` schema. You will first need to define the `emailer` 
 
 Continue onto the next step:
-* ↳ [Step 9: emailer](/09_emailer.md)
+* ↳ [Step 9: emailer](tutorial/09_emailer.md)

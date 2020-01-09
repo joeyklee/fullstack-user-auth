@@ -53,6 +53,6 @@ At this point you've:
 Before we go on to defining and writing our `user` routes, we are are going to make one more quick stop to create a middleware called `middleware/auth.js` that you will be able to add to any of your routes that will allow you to check if an authentication token has been passed in with the request. 
 
 Continue onto the next step:
-* ↳ [Step 10: auth middleware](/10_auth-middleware.md)
+* ↳ [Step 10: auth middleware](tutorial/10_auth-middleware.md)
 
 

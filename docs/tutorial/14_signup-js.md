@@ -79,5 +79,5 @@ A few notes:
 
 
 Continue onto the next step:
-* ↳ [Step 15: the Login class](/15_login-js.md)
+* ↳ [Step 15: the Login class](tutorial/15_login-js.md)
 

@@ -182,5 +182,5 @@ At this point you've:
 Only 2 more sections to go! In the next section we are going to add the functionality to handle rendering, adding, editing, and deleting our posts. 
 
 Continue onto the next step:
-* ↳ [Step 17: the Posts class](/16_posts-js.md)
+* ↳ [Step 17: the Posts class](tutorial/16_posts-js.md)
 

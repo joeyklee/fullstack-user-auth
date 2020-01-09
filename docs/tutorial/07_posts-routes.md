@@ -219,7 +219,7 @@ At this point you've:
 Notice how our `POST`, `PUT`, `DELETE` routes can be performed by anyone. In a usual scenario, we only want to user who created the document to be able to edit or delete data. Also, we only want people who are authorized to create data to do so (i.e. the people with user accounts). The next steps will be the most challenging, but it is alas time to get our authentication and authorization sorted for our project!
 
 Continue onto the next step:
-* ↳ [Step 8: CRUD users schema](/08_user-schema.md)
+* ↳ [Step 8: CRUD users schema](tutorial/08_user-schema.md)
 
 
 

@@ -131,4 +131,4 @@ At this point we've:
 Now that we've scaffolded our project directory and installed our project dependencies, it is time to start filling in our project.
 
 Continue onto the next step:
-* ↳ [Step 3: Configure the config](/03_configure-the-config.md)
+* ↳ [Step 3: Configure the config](tutorial/03_configure-the-config.md)

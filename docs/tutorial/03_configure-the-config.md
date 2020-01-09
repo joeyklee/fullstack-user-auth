@@ -49,7 +49,7 @@ At this point we've:
 Now that we've configured our `config.js` file, we can set our environment variables in the `.env` file. This is good practice so that you do not accidentally check in your important credentials that you don't want others to know (e.g. your email address and password etc).
 
 Continue onto the next step:
-* ↳ [Step 4: Setting the environment variables](/04_setting-env.md)
+* ↳ [Step 4: Setting the environment variables](tutorial/04_setting-env.md)
 
 
 

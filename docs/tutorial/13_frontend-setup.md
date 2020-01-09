@@ -505,5 +505,5 @@ At this point you've:
 
 
 Continue onto the next step:
-* ↳ [Step 14: the Signup class](/14_signup-js.md)
+* ↳ [Step 14: the Signup class](tutorial/14_signup-js.md)
 
