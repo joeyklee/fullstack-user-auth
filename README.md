@@ -65,21 +65,38 @@ Now that you've got an overview of the situation, let's get setup.
 
 For this project, we are going to build a social link sharing application that allows you and your friends to share interesting links from across the web in one place. The project will be comprised of the following components:
 
-* ↳ [Part 1: installation](01_installation.md)
-* ↳ [Part 2: setup](01_installation.md)
-* ↳ [Part 3: configure the config](/03_configure-the-config.md)
-* ↳ [Part 4: setting the environment](/04_setting-env.md)
-* ↳ [Part 5: basic express app](/05_basic-express-app.md)
-* ↳ [Part 6: posts schema](06_posts-schema.md)
-* ↳ [Part 7: posts routes](07_posts-routes.md)
-* ↳ [Part 8: users schema](08_users-schema.md)
-* ↳ [Part 9: emailer](09_emailer.md)
-* ↳ [Part 10: auth middleware](10_auth-middleware.md)
-* ↳ [Part 11: users routes](11_users-routes.md)
-* ↳ [Part 12: authd posts routes](12_authd-posts-routes.md)
-* ↳ [Part 13: frontend list view](13_frontend-list-view.md)
+* ↳ [Part 1: Installation](01_installation.md)
+* ↳ [Part 2: Setup](01_installation.md)
+* ↳ [Part 3: Configure the config](/03_configure-the-config.md)
+* ↳ [Part 4: Setting the environment](/04_setting-env.md)
+* ↳ [Part 5: Basic express app](/05_basic-express-app.md)
+* ↳ [Part 6: Posts schema](06_posts-schema.md)
+* ↳ [Part 7: Posts API routes](07_posts-routes.md)
+* ↳ [Part 8: Users schema](08_users-schema.md)
+* ↳ [Part 9: Emailer](09_emailer.md)
+* ↳ [Part 10: Auth middleware](10_auth-middleware.md)
+* ↳ [Part 11: Users API routes](11_users-routes.md)
+* ↳ [Part 12: Authd posts API routes](12_authd-posts-routes.md)
+* ↳ [Part 13: Frontend setup](13_frontend-setup.md)
+* ↳ [Part 14: Signup](14_signup-js.md)
+* ↳ [Part 15: Login](15_login-js.md)
+* ↳ [Part 16: Password Reset](16_password-reset.md)
+* ↳ [Part 17: Posts](17_posts-js.md)
+* ↳ [Part 18: Conclusion](18_conclusion.md)
 
 The first stop on our development journey will be to install our required software. You can begin by following this link:
 * ↳ [Part 1: installation](01_installation.md)
+
+
+
+## Acknowledgements
+
+* ITP at NYU for their support 
+* The tutorial which this is based off of:https://medium.com/swlh/jwt-authentication-authorization-in-nodejs-express-mongodb-rest-apis-2019-ad14ec818122
+* The tutorials by Tania Rascia: https://www.taniarascia.com
+* The OpenSource community
+* Tachyons.io for color inspiration
+* Discoteca Synthetica for the music that was played while making this. https://soundcloud.com/studio_malo/discoteca-synthetica
+* And you!
 
 
