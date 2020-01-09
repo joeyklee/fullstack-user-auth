@@ -1,6 +1,8 @@
 # Fullstack User Authentication and Authorization Tutorial w/ Node.js/Express.js, MongoDB, and JWT
 Tutorial on user authentication and authorization with node.js/express.js, Mongodb, JSONWebTokens, Cookies and HTML5
 
+![Screenshot of final application](assets/13_roadmap-final-product.png)
+
 ## Pre-requisites
 * Level: intermediate - advanced
 * Requirements: working/proficient knowledge of node.js, express.js, mongodb, and HTML5. I will be assuming some knowlege of these tools, but will try to make things as clear as possible.
@@ -66,13 +68,13 @@ Now that you've got an overview of the situation, let's get setup.
 For this project, we are going to build a social link sharing application that allows you and your friends to share interesting links from across the web in one place. The project will be comprised of the following components:
 
 * ↳ [Part 1: Installation](01_installation.md)
-* ↳ [Part 2: Setup](01_installation.md)
+* ↳ [Part 2: Setup](02_setup.md)
 * ↳ [Part 3: Configure the config](/03_configure-the-config.md)
 * ↳ [Part 4: Setting the environment](/04_setting-env.md)
 * ↳ [Part 5: Basic express app](/05_basic-express-app.md)
-* ↳ [Part 6: Posts schema](06_posts-schema.md)
+* ↳ [Part 6: Posts schema](06_post-schema.md)
 * ↳ [Part 7: Posts API routes](07_posts-routes.md)
-* ↳ [Part 8: Users schema](08_users-schema.md)
+* ↳ [Part 8: Users schema](08_user-schema.md)
 * ↳ [Part 9: Emailer](09_emailer.md)
 * ↳ [Part 10: Auth middleware](10_auth-middleware.md)
 * ↳ [Part 11: Users API routes](11_users-routes.md)
