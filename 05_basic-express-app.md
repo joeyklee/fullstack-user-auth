@@ -322,7 +322,7 @@ At this point you've:
 Now that your app is set up, it is now time to set up the CRUD routes for your `links` and `user` data.
 
 Continue onto the next step:
-* ↳ [Step 6: CRUD posts routes](/06_posts-schema.md)
+* ↳ [Step 6: CRUD posts routes](/06_post-schema.md)
 
 
 
