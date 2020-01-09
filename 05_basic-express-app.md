@@ -230,13 +230,14 @@ In that `public/index.html` file, include the following boilerplate code:
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title></title>
+    <title>List Project</title>
 
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" href="images/favicon.png" />
   </head>
 
   <body>
+    <!-- scripts -->
     <script src="js/main.js"></script>
   </body>
 </html>
@@ -321,7 +322,7 @@ At this point you've:
 Now that your app is set up, it is now time to set up the CRUD routes for your `links` and `user` data.
 
 Continue onto the next step:
-* ↳ [Step 6: CRUD posts routes](/06_posts-routes.md)
+* ↳ [Step 6: CRUD posts routes](/06_posts-schema.md)
 
 
 

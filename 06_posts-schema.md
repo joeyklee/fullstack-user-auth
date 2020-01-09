@@ -6,9 +6,9 @@ Whenever you're working with a database, the first thing you'll do is to set up 
 
 Let's start by setting up the data model for the posts data we expect to collect.
 
-Navigate over to `/models` and **create**posts a file called `posts.js`. 
+Navigate over to `/models` and **create** post a file called `post.js`. 
 
-In `/models/posts.js` we are going to add our CRUD operations:
+In `/models/post.js` we are going to add our CRUD operations:
 
 ```js
 const mongoose = require('mongoose');
@@ -54,3 +54,16 @@ In our model we have the following properties:
 * description
 * createdBy_username
 * createdBy_id
+
+## Check in to git
+Add this to git:
+
+```sh
+git add .
+git commit -m "creates Post model"
+```
+
+Continue onto the next step:
+* ↳ [Step 7: posts routes](/07_posts-routes.md)
+
+

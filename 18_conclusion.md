@@ -35,7 +35,21 @@ I will be straight up and acknowledge that the application still needs a lot of 
   * Heroku
   * Glitch
 
+NOTE: before you deploy the application, you will have to:
+* update the `localhost:3030` URLs in the `public/js` files to ==> whatever your public url is, therefore:
+  * `http://localhost:3030` ==> becomes ==> `https://joeyklee-list-project.glitch.me/`
+  * therefore:
+  * `http://localhost:3030/api/v1/posts` ==> becomes ==> `https://joeyklee-list-project.glitch.me/api/v1/posts`
+  * and so on
+* update the mongodb URL in the `.env` file
+  * if you use mongolab, it will look something like:
+  * `mongodb://<dbuser>:<dbpassword>@ds######.mlab.com:#####/list-project`
+* add to the `white-listed URLs` your public URL.
+
 These should work pretty much right out of the box. So if you put your project up on one of those sites, it should work like cake!
+
+Here's a final working version on Glitch:
+* https://joeyklee-list-project.glitch.me/
 
 ## Acknowledgements
 
